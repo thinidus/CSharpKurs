@@ -9,6 +9,8 @@ namespace Constructors
     class Person
     {
 
+        public static string test = "TEST";
+        public static int cont = 0;
         int id;
         string firstname;
         string lastname;
@@ -19,6 +21,7 @@ namespace Constructors
         public Person()
         {
             id = 1;
+            cont++;
             firstname = "Marcin";
             lastname = "Kowalski";
             age = 14;
@@ -27,6 +30,7 @@ namespace Constructors
 
         public Person(int id, string firstname, string lastname, string address, int age, string gender)
         {
+            
             this.id = id;
             this.firstname = firstname;
             this.lastname = lastname;

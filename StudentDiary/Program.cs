@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace StudentDiary
 {
@@ -11,56 +8,41 @@ namespace StudentDiary
         static void Main(string[] args)
         {
 
-            Diary diary = new Diary();
+            
+            
+            void changeName(Diary diary)
+            {
+                diary = new Diary();
+                diary.nazwa = "Artura dziennik";
+            }
+
 
             //diary.AddRating(5);
             //diary.AddRating(8.5F);
             //diary.AddRating(4.7f);
+            //diary.AddRating(1.7f);
+            //diary.AddRating(5);
+            //diary.AddRating(1);
+
+            //DiaryStatistics stats = diary.ComputeStatistics();
+
+            //Console.WriteLine("średnia: " + stats.avgaverageGrade);
+            //Console.WriteLine("Max: " + stats.maxGrade);
+            //Console.WriteLine("Min: " + stats.minGrade);
+
+            //Diary diary2 = new Diary();
+
+            //diary2.AddRating(1.7f);
+            //diary2.AddRating(5);
+            //diary2.AddRating(1);
+
+            //stats = diary2.ComputeStatistics();
+
+            //Console.WriteLine("średnia2: " + stats.avgaverageGrade);
+            //Console.WriteLine("Max2: " + stats.maxGrade);
+            //Console.WriteLine("Min2: " + stats.minGrade);
 
 
-            //float avg = diary.CaculateAverage();
-            //float max = diary.GiveMaxRating();
-            //float min = diary.GiveMinRating();
-
-            for (; ;)
-            {
-            
-                Console.WriteLine("Podaj ocenę z zakresu 1- 10");
-                float rating;
-                bool resultOfParse = float.TryParse(Console.ReadLine(), out rating);
-
-                if (rating == 11)
-                {
-                    break;
-                }
-
-                if (resultOfParse == true)
-                {
-                    if (rating <= 11 && rating >= 1 )
-                    {
-                        diary.AddRating(rating);
-                    }
-                    else
-                    {
-                        Console.WriteLine("Podałeś liczbę z poza zakresu.");
-                    }
-                    
-                }
-                else
-                {
-                    Console.WriteLine("Wprowadziłeś niepoprawny znak");
-                }
-
-                
-
-                
-
-
-            }
-
-            Console.WriteLine("Średnia ocen: "+ diary.CaculateAverage());
-            Console.WriteLine("Najwyższa ocena: " + diary.GiveMaxRating());
-            Console.WriteLine("Najniższa ocena: " + diary.GiveMinRating());
 
 
             Console.ReadKey();
