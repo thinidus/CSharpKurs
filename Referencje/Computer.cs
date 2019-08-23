@@ -8,19 +8,32 @@ namespace Referencje
 {
     class Computer
     {
-        public static int wystapienia;
 
-        public Computer()
+
+        public ComputerType computerType;
+        public Elements computerElements;
+
+
+        public enum ComputerType
         {
-            wystapienia++;
+            Desctop,
+            Laptop,
+            Server,
+            Mobile
         }
 
-        public string name = "Stara nazwa";
-
-        public void Showname(string name)
+        public struct Elements
         {
-            Console.WriteLine(name);
+            public string cpu;
+            public string gpu;
+            public string ram;
+            public string hdd;
+            public string sdd;
+            public string motherboard;
+
+
         }
+
 
 
     }

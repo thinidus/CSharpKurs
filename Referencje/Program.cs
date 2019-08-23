@@ -8,31 +8,28 @@ namespace Referencje
 {
     class Program
     { 
-    public static void ShowName(ref Computer personalComputer)
-    {
-            personalComputer = new Computer();
-            personalComputer.name = "Moja nazwa";
-
-        }
-
     
         static void Main(string[] args)
         {
+            Immutable();
 
+        }
 
-            Computer myComputer = new Computer();
+        private static void Immutable()
+        {
 
-            Computer herComputer = myComputer;
+            string name = " Marcin ";
+            name = name.Trim();
 
+            DateTime date = new DateTime(2015 , 3 , 10);
+            date = date.AddHours(48);
+
+            Computer computer = new Computer();
             
 
-            ShowName(ref myComputer);
-
-            Console.WriteLine(myComputer.name + " wystąpienia " + Computer.wystapienia);
+            Console.WriteLine(date);
             Console.ReadKey();
-
-
-
+            
         }
     }
 }
