@@ -15,6 +15,8 @@ namespace StudentDiary
         //Stan - zmienne - pola
         List<float> ratings;
 
+        public string nazwa;
+
 
         //Zachowania
         public void AddRating(float rating)
@@ -22,29 +24,25 @@ namespace StudentDiary
             ratings.Add(rating);
         }
 
-        public float CaculateAverage()
+        internal DiaryStatistics ComputeStatistics()
         {
-            float sum = 0;
-            float average = 0;
+
+            DiaryStatistics stats = new DiaryStatistics();
+
+            float sum = 0f;
 
             foreach (var rating in ratings)
             {
                 sum += rating;
             }
 
-            average = sum / ratings.Count();
-            return average;
+            stats.avgaverageGrade = sum / ratings.Count();
+            stats.maxGrade = ratings.Max();
+            stats.minGrade = ratings.Min();
+
+            return stats;
         }
 
-        public float GiveMaxRating()
-        {
-            return ratings.Max();
-        }
-
-        public float GiveMinRating()
-        {
-            return ratings.Min();
-        }
 
 
     }

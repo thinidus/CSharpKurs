@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5C496FFB-E327-427E-9B41-D1F23D58B045}</ProjectGuid>
+    <ProjectGuid>{F2C175A8-8FC3-4AE7-9CA5-5A1415BA8121}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>StudentDiary</RootNamespace>
-    <AssemblyName>StudentDiary</AssemblyName>
+    <RootNamespace>Referencje</RootNamespace>
+    <AssemblyName>Referencje</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,8 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Diary.cs" />
-    <Compile Include="DiaryStatistics.cs" />
+    <Compile Include="Computer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
