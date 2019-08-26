@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Speech.Synthesis;
 
 namespace Referencje
 {
@@ -11,36 +12,46 @@ namespace Referencje
     
         static void Main(string[] args)
         {
-           
-            Arrays();
 
-        }
+            SpeechSynthesizer speech = new SpeechSynthesizer();
 
-        private static void Arrays()
-        {
+            List<string> listaGlosow = new List<string>(); 
 
-            Computer[] ratings = new Computer[4];
-            AddRatings(ratings);
 
-            foreach (Computer item in ratings)
+            var collection = speech.GetInstalledVoices();
+
+            foreach (var item in collection)
             {
-                Console.WriteLine(Computer.initCounter);
+                listaGlosow.Add(item.VoiceInfo.Name);
             }
 
-            Console.WriteLine(ratings.Length);
+            speech.SelectVoice(listaGlosow.Last());
+            
 
-            Console.ReadKey();
+
+            String zdanie;
+
+            while (true)
+            {
+                Console.WriteLine("Wpisz zdanie które mam przeczytać");
+                zdanie = Console.ReadLine();
+                if (zdanie == "x") { break; }
+                speech.Speak(zdanie);
+
+                
+
+            }
+
+            
+            
+            
+           
 
         }
 
-
-        static void AddRatings(Computer[] ratings)
-        {
-            ratings[0] = new Computer();
-            ratings[1] = new Computer();
-            ratings[2] = new Computer();
-            ratings[3] = new Computer();
-        }
+       
+        
+        
 
 
     }

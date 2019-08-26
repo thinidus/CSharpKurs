@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enkapsulacja", "Enkapsulacj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Referencje", "Referencje\Referencje.csproj", "{F2C175A8-8FC3-4AE7-9CA5-5A1415BA8121}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Typy.test", "Typy.test\Typy.test.csproj", "{9B89BF04-B660-432B-B6AF-4A33C867FB37}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{F2C175A8-8FC3-4AE7-9CA5-5A1415BA8121}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F2C175A8-8FC3-4AE7-9CA5-5A1415BA8121}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F2C175A8-8FC3-4AE7-9CA5-5A1415BA8121}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B89BF04-B660-432B-B6AF-4A33C867FB37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B89BF04-B660-432B-B6AF-4A33C867FB37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B89BF04-B660-432B-B6AF-4A33C867FB37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B89BF04-B660-432B-B6AF-4A33C867FB37}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
