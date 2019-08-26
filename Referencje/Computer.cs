@@ -8,33 +8,18 @@ namespace Referencje
 {
     class Computer
     {
+        public static int initCounter = 0;
 
 
-        public ComputerType computerType;
-        public Elements computerElements;
-
-
-        public enum ComputerType
+        public Computer()
         {
-            Desctop,
-            Laptop,
-            Server,
-            Mobile
+            initCounter++;
         }
 
-        public struct Elements
-        {
-            public string cpu;
-            public string gpu;
-            public string ram;
-            public string hdd;
-            public string sdd;
-            public string motherboard;
+        
+        
 
-
-        }
-
-
+        
 
     }
 }

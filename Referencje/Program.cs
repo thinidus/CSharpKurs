@@ -11,25 +11,37 @@ namespace Referencje
     
         static void Main(string[] args)
         {
-            Immutable();
+           
+            Arrays();
 
         }
 
-        private static void Immutable()
+        private static void Arrays()
         {
 
-            string name = " Marcin ";
-            name = name.Trim();
+            Computer[] ratings = new Computer[4];
+            AddRatings(ratings);
 
-            DateTime date = new DateTime(2015 , 3 , 10);
-            date = date.AddHours(48);
+            foreach (Computer item in ratings)
+            {
+                Console.WriteLine(Computer.initCounter);
+            }
 
-            Computer computer = new Computer();
-            
+            Console.WriteLine(ratings.Length);
 
-            Console.WriteLine(date);
             Console.ReadKey();
-            
+
         }
+
+
+        static void AddRatings(Computer[] ratings)
+        {
+            ratings[0] = new Computer();
+            ratings[1] = new Computer();
+            ratings[2] = new Computer();
+            ratings[3] = new Computer();
+        }
+
+
     }
 }
