@@ -15,7 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enkapsulacja", "Enkapsulacj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Referencje", "Referencje\Referencje.csproj", "{F2C175A8-8FC3-4AE7-9CA5-5A1415BA8121}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Typy.test", "Typy.test\Typy.test.csproj", "{9B89BF04-B660-432B-B6AF-4A33C867FB37}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Typy.Test", "Typy.test\Typy.Test.csproj", "{9B89BF04-B660-432B-B6AF-4A33C867FB37}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
