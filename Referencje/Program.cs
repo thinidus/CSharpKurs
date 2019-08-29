@@ -15,24 +15,25 @@ namespace Referencje
 
             Computer myComputer = new Computer();
 
-            myComputer.name = "Pentium";
+            myComputer.Name = "";
             myComputer.costNett = 1000f;
 
-            WriteResult(myComputer.name, myComputer.CountGross(myComputer.costNett));
+            WriteResult(myComputer.Name, myComputer.CountGross(myComputer.costNett), 1f , 2f, 3.09f);
 
             Console.ReadKey();
 
 
         }
 
-       static void WriteResult(string name, float gross)
+       static void WriteResult(string Name, params float[] gross)
         {
-            Console.WriteLine(name + ": " + gross + " brutto");
+            Console.WriteLine($"{Name}: {gross[0]:C2} brutto[float] {gross.Length}");
+                
         }
 
-        static void WriteResult(string name, int gross)
+        static void WriteResult(string Name, int gross)
         {
-            Console.WriteLine(name + ": " + gross + " brutto");
+            Console.WriteLine(Name + ": " + gross + " brutto");
         }
 
 
