@@ -13,35 +13,29 @@ namespace Referencje
         static void Main(string[] args)
         {
 
-            SpeechSynthesizer speech = new SpeechSynthesizer();
+            Computer myComputer = new Computer();
 
-            
-            
+            myComputer.Name = "";
+            myComputer.costNett = 1000f;
 
+            WriteResult(myComputer.Name, myComputer.CountGross(myComputer.costNett), 1f , 2f, 3.09f);
 
-            String zdanie;
+            Console.ReadKey();
 
-            while (true)
-            {
-                Console.WriteLine("Wpisz zdanie które mam przeczytać");
-                zdanie = Console.ReadLine();
-                if (zdanie == "x") { break; }
-                speech.Speak(zdanie);
-
-                
-
-            }
-
-            
-            
-            
-           
 
         }
 
-       
-        
-        
+       static void WriteResult(string Name, params float[] gross)
+        {
+            Console.WriteLine($"{Name}: {gross[0]:C2} brutto[float] {gross.Length}");
+                
+        }
+
+        static void WriteResult(string Name, int gross)
+        {
+            Console.WriteLine(Name + ": " + gross + " brutto");
+        }
+
 
 
     }

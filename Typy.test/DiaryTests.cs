@@ -4,11 +4,15 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Typy.test
 {
     [TestClass]
-    public class UnitTest1
+    public class DiaryTests
     {
         [TestMethod]
         public void TestMethod1()
         {
+            bool value = false;
+
+            Assert.IsTrue(value);
+
         }
     }
 }
