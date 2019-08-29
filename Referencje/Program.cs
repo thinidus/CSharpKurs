@@ -15,17 +15,7 @@ namespace Referencje
 
             SpeechSynthesizer speech = new SpeechSynthesizer();
 
-            List<string> listaGlosow = new List<string>(); 
-
-
-            var collection = speech.GetInstalledVoices();
-
-            foreach (var item in collection)
-            {
-                listaGlosow.Add(item.VoiceInfo.Name);
-            }
-
-            speech.SelectVoice(listaGlosow.Last());
+            
             
 
 
