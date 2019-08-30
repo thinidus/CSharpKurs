@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="NameChangerDelegate.cs" />
     <Compile Include="Computer.cs" />
+    <Compile Include="NameChangerEventArgs.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

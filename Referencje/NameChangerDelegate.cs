@@ -7,6 +7,6 @@ using System.Threading.Tasks;
 namespace Referencje
 {
 
-    public delegate void NameChangerDelegate(string existingname, string newname);
+    public delegate void NameChangerDelegate(object sender, NameChangerEventArgs args);
     
 }

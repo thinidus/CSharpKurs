@@ -26,7 +26,11 @@ namespace Referencje
                 {
                     if (_name != value)
                     {
-                        NameChanged(_name, value);
+                        NameChangerEventArgs args = new NameChangerEventArgs();
+                        args.ExistingName = _name;
+                        args.NewName = value;
+
+                        NameChanged(this, args);
                     }
 
                     _name = value;
@@ -38,7 +42,7 @@ namespace Referencje
         }
 
 
-        public NameChangerDelegate NameChanged;
+        public event NameChangerDelegate NameChanged;
 
 
         public float costNett = 0f;

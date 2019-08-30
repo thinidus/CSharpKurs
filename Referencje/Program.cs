@@ -18,8 +18,11 @@ namespace Referencje
         {
 
             Computer myComputer = new Computer();
-            myComputer.NameChanged += new NameChangerDelegate(Onnamechange);
-            myComputer.NameChanged += new NameChangerDelegate(OnnamechangeStars);
+            myComputer.NameChanged += Onnamechange;
+            myComputer.NameChanged += OnnamechangeStars;
+ 
+
+
             myComputer.Name = "New";
             myComputer.costNett = 1000f;
 
@@ -40,12 +43,12 @@ namespace Referencje
 
         }
 
-        private static void Onnamechange(string existingname, string newname)
+        private static void Onnamechange(object sender, NameChangerEventArgs args)
         {
-            Console.WriteLine($"Zmieniono z {existingname} na {newname}");
+            Console.WriteLine($"Zmieniono z {args.ExistingName} na {args.NewName}");
         }
 
-        private static void OnnamechangeStars(string existingname, string newname)
+        private static void OnnamechangeStars(object sender, NameChangerEventArgs args)
         {
             Console.WriteLine(" \n * * * * * * * * * * * * * * * * * * * * * ");
         }
