@@ -12,6 +12,8 @@ namespace Referencje
 
         private string _name;
 
+        
+
         public string Name
         {
             get
@@ -22,6 +24,11 @@ namespace Referencje
             {
                 if (!string.IsNullOrEmpty(value))
                 {
+                    if (_name != value)
+                    {
+                        NameChanged(_name, value);
+                    }
+
                     _name = value;
                 } else
                 {
@@ -31,7 +38,7 @@ namespace Referencje
         }
 
 
-
+        public NameChangerDelegate NameChanged;
 
 
         public float costNett = 0f;
@@ -41,6 +48,9 @@ namespace Referencje
         public Computer()
         {
             initCounter++;
+            
+
+
         }
 
         public float CountGross(float nett)
